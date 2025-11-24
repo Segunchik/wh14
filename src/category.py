@@ -4,6 +4,7 @@ class Category:
     products: list
     category_count: int = 0
     product_count: int = 0
+
     def __init__(self, name, description, products):
         self.name = name
         self.description = description
