@@ -36,3 +36,5 @@ class Product:
             else:
                 self.__price = self.__price
                 print("Цена осталась прежней")
+        else:
+            self.__price = new_price

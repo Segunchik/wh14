@@ -29,3 +29,26 @@ def test_class_method():
         assert product.description == data["description"]
         assert product.price == data["expected_price"]
         assert product.quantity == data["quantity"]
+
+
+def test_set_higher_price():
+    product = Product("Товар", "Описание", 100, 5)
+    product.price = 150
+    print(product.price)
+    assert product.price == 150
+
+
+def test_set_lower_price():
+    product = Product("Товар", "Описание", 100, 5)
+    # Имитируем ввод пользователя
+    import sys
+    from unittest.mock import patch
+
+    with patch('builtins.input', return_value='y'):
+        product.price = 80
+        assert product.price == 80
+
+    with patch('builtins.input', return_value='n'):
+        product.price = 70
+        assert product.price == 80  # Цена не должна измениться
+    print("Тест уменьшения цены пройден")
