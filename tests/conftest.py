@@ -30,5 +30,22 @@ def category_2():
 
 
 @pytest.fixture
-def product():
+def category_3():
+    return Category(
+        name="category name3",
+        description="description3",
+        products=[
+            Product("product name 7", "product description 7", 161.5, 15),
+            Product("product name 8", "product description 8", 171.5, 14),
+        ],
+    )
+
+
+@pytest.fixture
+def product_1():
     return Product("product name 1", "product description 1", 91.5, 4)
+
+
+@pytest.fixture
+def product_2():
+    return Product("product name 6", "product description 6", 101.5, 3)
