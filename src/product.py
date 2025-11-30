@@ -34,4 +34,5 @@ class Product:
             if answer.lower() == "y":
                 self.__price = new_price
             else:
+                self.__price = self.__price
                 print("Цена осталась прежней")
