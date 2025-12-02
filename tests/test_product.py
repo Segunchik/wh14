@@ -51,3 +51,11 @@ def test_set_lower_price():
         product.price = 70
         assert product.price == 80  # Цена не должна измениться
     print("Тест уменьшения цены пройден")
+
+
+def test_product_str(product_1):
+    assert str(product_1) == "product name 1, 91.5 руб. Остаток: 4"
+
+
+def test_product_add(product_1, product_2):
+    assert product_1 + product_2 == 670.5
