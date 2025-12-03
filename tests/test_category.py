@@ -36,3 +36,7 @@ def test_product_counters():
     category.add_product(product1)
     category.add_product(product2)
     assert Category.product_count == 10
+
+
+def test_category_str(category_2):
+    assert str(category_2) == "category name2, количество продуктов: 9"
