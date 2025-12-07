@@ -1,3 +1,4 @@
+from src.lawngrass import LawnGrass
 from src.smartphone import Smartphone
 
 if __name__ == '__main__':
