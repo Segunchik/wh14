@@ -1,3 +1,4 @@
+from src.category import Category
 from src.lawngrass import LawnGrass
 from src.smartphone import Smartphone
 
