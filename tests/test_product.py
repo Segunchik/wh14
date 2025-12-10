@@ -1,3 +1,5 @@
+import pytest
+
 from src.lawngrass import LawnGrass
 from src.product import Product
 from src.smartphone import Smartphone
@@ -95,3 +97,10 @@ def test_print_mixin(capsys):
     )
     message_2 = capsys.readouterr()
     assert message_2.out.strip() == "LawnGrass(Газонная трава, Элитная трава для газона, 500.0, 20)"
+
+
+def test_zero_quantity():
+    with pytest.raises(ValueError) as excinfo:
+        Product("name 1", "product description 1", 91.5, 0)
+
+    assert str(excinfo.value) == "Товар с нулевым количеством не может быть добавлен"
