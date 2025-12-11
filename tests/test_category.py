@@ -40,3 +40,11 @@ def test_product_counters():
 
 def test_category_str(category_2):
     assert str(category_2) == "category name2, количество продуктов: 9"
+
+
+def test_category_zero_products(category_zero_product):
+    assert category_zero_product.middle_price() == 0
+
+
+def test_category_middle_price(category_1):
+    assert category_1.middle_price() == 41.5
